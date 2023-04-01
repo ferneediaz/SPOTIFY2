@@ -46,24 +46,27 @@ async function refreshAccessToken(token) {
   }
 }
 
+
 export default NextAuth({
   providers: [
     SpotifyProvider({
-      clientId: process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_ID,
-      clientSecret: process.env.NEXT_PUBLIC_SPOTIFY_CLIENT_SECRET,
+      clientId: process.env.SPOTIFY_CLIENT_ID,
+      clientSecret: process.env.SPOTIFY_CLIENT_SECRET,
+      authorization: 'https://accounts.spotify.com/authorize',
       scopes: [
         'user-read-email',
         'playlist-read-private',
+        'user-read-private',
+        'streaming',
         'user-library-read',
         'user-library-modify',
         'user-read-playback-state',
         'user-modify-playback-state',
         'user-read-recently-played',
         'user-follow-read'
-      ],
-    }),
+      ]
+    })
   ],
-
 
   callbacks: {
     async jwt({ token, user, account }) {
