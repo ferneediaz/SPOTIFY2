@@ -1,5 +1,5 @@
 # SpotifyV2
-
+for live demo https://spotify-2-kappa-ebon.vercel.app/
 <!-- Add screenshots of the application here -->
 <img src="https://imgur.com/oulPGq5.png" alt="Desktop Screenshot" width="500"> <img src="https://imgur.com/ogwKVYP.png" alt="Mobile Screenshot" width="300">
 
